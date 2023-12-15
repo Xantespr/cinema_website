@@ -1,11 +1,11 @@
 <div id="kontakt">
-        <h2>Zapraszamy do naszego kina!</h2>
-        <p>ul.Lorem 213
-            <br>
-        35-123 Rzeszów
-        </p>
-        <p>Otwarte:<br>
-        pn. - pt. : 10 - 11<br>
-        sob. niedz. : 11 - 12 
-        </p>
-    </div>
+    <h2>Welcome to Our Cinema!</h2>
+    <p>Address: Lorem 213
+        <br>
+    00-123 Warsaw
+    </p>
+    <p>Opening Hours:<br>
+    Mon. - Fri.: 10 AM - 11 PM<br>
+    Sat. - Sun.: 11 AM - 12 PM 
+    </p>
+</div>

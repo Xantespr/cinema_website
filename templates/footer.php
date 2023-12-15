@@ -1,4 +1,3 @@
 <footer>
-      WK 4j
-
+      <p>&copy; 2023 XYZ Cinema. All rights reserved.</p>
 </footer>

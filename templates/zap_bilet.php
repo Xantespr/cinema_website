@@ -16,7 +16,6 @@
         <a href="../index.php#filmy">Lista filmów</a>
         <a href="../index.php#kontakt">Kontakt</a>
         <a class="active" href="zap_bilet.php">Zapłać bilet</a>
-
     </nav>   
         <div id="zap_b">
             <form method="POST" action="">
