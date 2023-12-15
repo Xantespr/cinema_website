@@ -1,51 +1,66 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: linear-gradient(
-    90deg,
-    rgb(2, 0, 36),
-    rgb(9, 9, 108),
-    rgb(2, 0, 36)
-  );
+  background: rgba(0, 0, 0, 0.75);
   margin: 0;
+  padding: 0;
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
 }
 
+header a {
+  text-decoration: none;
+  color: orange;
+}
+
+/* nav.php template */
 header {
-  width: 100%;
-  /* clear: both; */
+  background-color: #001F3F;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
 }
 
 header h2 {
-  color: orange;
-  text-align: center;
+  color: #DAA520;
   font-size: 72px;
 }
-
 nav {
-  opacity: 90%;
-  background-color: gray;
-  overflow: hidden;
+  background-color: #800020;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   width: 100%;
 }
 
-nav a {
-  float: left;
-  text-align: center;
-  padding: 14px 16px;
+nav ul li {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 1rem;
+  display: inline;
+}
+
+nav ul li a {
   text-decoration: none;
-  font-size: 17px;
-  color: black;
+  color: #fff;
+  font-size: 23px;
 }
 
-nav a:hover {
-  background-color: #dddddda9;
+nav ul li a:hover {
+  color: orange;
 }
 
-nav a.active {
-  background-color: #ddd;
+.active {
+  color: orange;
+  font-weight: bold;
 }
 
+/* news.php template */
 #news{
-  background-color: blueviolet;
+  background-color: orange;
   height: 300px;
 }
 
@@ -53,8 +68,128 @@ nav a.active {
   margin: 0;
 }
 
+/* film_shedule.php template */
+.dropdown {
+  display: flex;
+  padding: 10px 0px 10px 50px;
+  align-items: center;
+}
+
+#flexbox{
+  flex: 5;
+}
+
+.dropdown label {
+  flex: 2;
+  font-size: 20px;
+}
+
+.dropdown select {
+  flex: 2;
+  width: 100%;
+  background-color: #333;
+  color: orange;
+  padding: 5px;
+  font-size: 20px;
+  border-style: none;
+  border-radius: 8px;
+  margin-right: 50px;
+}
+
+#filmy {
+  color: orange;
+  text-align: center;
+  margin-top: 20px;
+  margin-top: 20px;
+}
+
+.seans {
+  background-color: gray;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.seans:hover {
+  background-color: #333;
+  transition-duration: 0.5s;
+  transition-property: background-color;
+}
+
+.seans td {
+  text-align: left;
+  padding: 10px 10px 10px 40px;
+}
+
+/* ticket_form.php template */
+#filmShowsContainer {
+  background-color: gray;
+  display: flex;
+  text-align: center;
+}
+
+#filmBox{
+  padding: 25px 0px 25px 0px;
+  flex: 1;
+}
+
+#film_img{
+  max-width: 95%;
+}
+
+#fr{
+  flex: 2;
+}
+
+#film_str{
+  font-size: 40px;
+  font-style: bold;
+}
+
+.film_str{
+  color: white;
+  font-size: 20px;
+  padding: 0px 0px 0px 20px;
+}
+
+#buyTicketButton {
+  width: 35%;
+  background-color: #333;
+  color: orange;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+}
+
+#buyTicketButton:hover {
+  background-color: orange;
+  color: white;
+  transition-duration: 1s;
+  transition-property: background-color, color;
+}
+
+/* buy_ticket.php template */
+
+/* footer.php template */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+
+
+
+
+
+
+#main-content {
+  padding: 20px;
+}
+
 #formularz_bilety {
-  display: none;
   position: fixed;
   bottom: 20%;
   border: 3px solid #f1f1f1;
@@ -69,22 +204,7 @@ nav a.active {
   transform: translateX(-50%);
 }
 
-@media only screen and (min-width: 1080px) {
-  #formularz_bilety {
-    width: 864px;
-  }
-}
 
-#fl,
-#fr {
-  float: left;
-  width: 50%;
-}
-
-#fl img {
-  height: 550px;
-  max-width: 98%;
-}
 
 
 
@@ -119,41 +239,9 @@ table, tbody, tr {
   text-align: center;
 } */
 
-.day {
-  background-color: chocolate;
-  border: 1px solid rebeccapurple;
-  text-align: left;
-  padding: 5px 5px  5px 10px;
-  width: 14%;
-}
 
-.active {
-  background-color: gray;
-  scale: 1.001;
-  transition-duration: 0.5s;
-  transition-property: background-color, scale;
-}
 
-.day:hover {
-  background-color: rebeccapurple;
-  scale: 1.001;
-  transition-duration: 0.5s;
-  transition-property: background-color, scale;
-}
 
-.seans {
-  background-color: gray;
-  border: 1px solid rebeccapurple;
-  text-align: left;
-  padding: 5px 5px  5px 10px;
-}
-
-.seans:hover {
-  background-color: rebeccapurple;
-  scale: 1.001;
-  transition-duration: 0.5s;
-  transition-property: background-color, scale;
-}
 
 
 
@@ -185,19 +273,10 @@ table, tbody, tr {
 #kontakt {
   padding: 4px;
   text-align: center;
-  background-color: orange;
-  opacity: 60%;
-}
-
-footer {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 0.7791491596638656) 55%,
-    rgba(18, 9, 121, 1) 100%
-  );
-  color: white;
+  background-color: #333;
+  color: orange;
+  opacity: 90%;
+  clear: both;
 }
 
 #zap_b {
@@ -256,6 +335,10 @@ td {
   text-align: center;
   border: #ddd 1px  solid;
 }
+
+
+
+
 
 #logout {
   padding: 3px;
