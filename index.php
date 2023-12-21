@@ -9,11 +9,16 @@
         
     </head>
     <body>
-        <?php include 'templates/nav.php';?>
-        <?php include 'templates/news.php';?>
-        <?php include 'templates/film_shedule.php';?>
-        <?php include 'templates/contact.php';?>
-        <?php include 'templates/footer.php';?>
+        
+            <?php include 'templates/nav.php';?>
+            <?php include 'templates/news.php';?>
+            <div id = "body_wrap">
+            
+            <?php include 'templates/film_shedule.php';?>
+            </div>
+            <?php include 'templates/contact.php';?>
+            <?php include 'templates/footer.php';?>
+        
     </body>
 </html>
 

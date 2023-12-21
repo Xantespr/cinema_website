@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php include 'templates/nav.php';?>
-
+    <div id = 'body_wrap'>
     <div id="filmShowsContainer">
         <?php
             $c = mysqli_connect("localhost", "root", "", "cinema_db");
@@ -29,13 +29,17 @@
             mysqli_close($c);               
         ?>
     </div>
+        </div>
     <?php include 'templates/contact.php';?>
     <?php include 'templates/footer.php';?>
 </body>
     <script>
+        document.querySelector('.active').classList.remove('active');
+        document.querySelector('ul li:nth-child(2) a').classList.add('active');
+        
         var buyTicketButton = document.getElementById("buyTicketButton");
         buyTicketButton.addEventListener("click", function() {
-            window.location.href = "buy_ticket.php?id=" + <?php echo $_GET['id']; ?>;
+            window.location.href = "buy_ticket.php?id=" + <?php echo $_GET['id']; ?> + "&show=0";
         });
     </script>
 </html>
