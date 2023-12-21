@@ -16,7 +16,8 @@ After clicking 'Submit' to buy tickets you  will see the information that you ne
 
 ### Admin panel
 > [!IMPORTANT]
-> To open admin panel, you need to change index.php in you url to admin.php.
+> To open admin panel, you need to change index.php in you url to admin.php.  
+  
 You need to login with login and password provided in the database table: login.
 There is some forms to add shows, rooms, films, delete them, some stats tables etc.
 ![Webpage screenshot](screenshots/admin.jpg?raw=true "Preview")
