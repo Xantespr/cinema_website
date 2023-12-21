@@ -6,9 +6,9 @@ Simple cinema website with admininstration panel and database.
 
 ## Description
 
-News section is not created. Under this section is a place where films played today, or up to six day ahead (based on dropdown value) will be displayed. After clicking row with any film title, we will be redirected to film description with poster and button which lead to show film screening dates, where we can chose date and language, and provide our personal data to buy a ticket.
+News section is not created. Under this section is a place where films played today, or up to six day ahead (based on dropdown value) will be displayed. After clicking row with any film title, we will be redirected to film description with poster and button which lead to show film screening dates, where we can chose date and language, and provide our personal data to buy a ticket.  
 Film description:
-![Webpage screenshot](screenshots/film_description.jpg?raw=true "Preview")
+![Webpage screenshot](screenshots/film_description.jpg?raw=true "Preview")  
 Buying tickets:
 ![Webpage screenshot](screenshots/buy_ticket.jpg?raw=true "Preview")
 
