@@ -1,34 +1,76 @@
+:root {
+  --c1: orange;
+  --c2: #4f4e57;
+  --c4: #19222c;
+  --c3: white;
+  --c5: rgba(14, 6, 165, 0.329);
+} 
+
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: rgba(0, 0, 0, 0.75);
+  background-color: var(--c4);
   margin: 0;
   padding: 0;
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
 }
 
-header a {
-  text-decoration: none;
-  color: orange;
+form {
+  padding: 15px;
+}
+
+table, tbody, tr {
+  gap: 0px;
+  width: 100%;
+  align-content: center;
+  border-spacing: 0px;
+}
+
+.buttonWithHover {
+  background-color: var(--c2);
+  color: var(--c1);
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+}
+
+.buttonWithHover:hover {
+  background-color: var(--c1);
+  color: var(--c3);
+  transition-duration: 1s;
+  transition-property: background-color, color;
+}
+
+
+#body_wrap {
+  max-width: 70%;
+  margin: 0 auto;
 }
 
 /* nav.php template */
+
 header {
-  background-color: #001F3F;
-  color: #fff;
+  background-color: var(--c2);
+  color: var(--c3);
   padding: 1em;
   text-align: center;
 }
 
+header a {
+  text-decoration: none;
+  color: var(--c1);
+}
+
 header h2 {
-  color: #DAA520;
+  color: var(--c1);
   font-size: 72px;
 }
-nav {
-  background-color: #800020;
-}
+
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -45,22 +87,22 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #fff;
+  color: var(--c3);
   font-size: 23px;
 }
 
 nav ul li a:hover {
-  color: orange;
+  color: var(--c1);
 }
 
 .active {
-  color: orange;
+  color: var(--c1);
   font-weight: bold;
 }
 
 /* news.php template */
 #news{
-  background-color: orange;
+  background-color: rgb(212, 147, 25);
   height: 300px;
 }
 
@@ -87,8 +129,8 @@ nav ul li a:hover {
 .dropdown select {
   flex: 2;
   width: 100%;
-  background-color: #333;
-  color: orange;
+  background-color: var(--c2);
+  color: var(--c1);
   padding: 5px;
   font-size: 20px;
   border-style: none;
@@ -96,21 +138,21 @@ nav ul li a:hover {
   margin-right: 50px;
 }
 
-#filmy {
-  color: orange;
+#filmsContainer {
+  color: var(--c1);
   text-align: center;
   margin-top: 20px;
   margin-top: 20px;
 }
 
 .seans {
-  background-color: gray;
+  background-color: var(--c5);
   font-weight: bold;
   font-size: 28px;
 }
 
 .seans:hover {
-  background-color: #333;
+  background-color: var(--c2);
   transition-duration: 0.5s;
   transition-property: background-color;
 }
@@ -122,7 +164,6 @@ nav ul li a:hover {
 
 /* ticket_form.php template */
 #filmShowsContainer {
-  background-color: gray;
   display: flex;
   text-align: center;
 }
@@ -146,15 +187,15 @@ nav ul li a:hover {
 }
 
 .film_str{
-  color: white;
+  color: var(--c3);
   font-size: 20px;
   padding: 0px 0px 0px 20px;
 }
 
 #buyTicketButton {
   width: 35%;
-  background-color: #333;
-  color: orange;
+  background-color: var(--c2);
+  color: var(--c1);
   font-size: 20px;
   padding: 10px;
   border-radius: 10px;
@@ -163,171 +204,230 @@ nav ul li a:hover {
 }
 
 #buyTicketButton:hover {
-  background-color: orange;
-  color: white;
+  background-color: var(--c1);
+  color: var(--c3);
   transition-duration: 1s;
   transition-property: background-color, color;
 }
 
 /* buy_ticket.php template */
 
-/* footer.php template */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 1em;
-  text-align: center;
+#string {
+  color: var(--c1);
 }
 
-
-
-
-
-
-
-#main-content {
-  padding: 20px;
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-#formularz_bilety {
-  position: fixed;
-  bottom: 20%;
-  border: 3px solid #f1f1f1;
-  z-index: 8;
-  background-color: orange;
-  width: 80%;
-  height: 60%;
+label {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: var(--c1);
+  
+}
+
+input, select {
+  width: 100%;
+  background-color: var(--c2);
+  color: var(--c1);
   padding: 5px;
-  text-align: center;
-  padding-bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
+  font-size: 20px;
+  border-style: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
+.button-row {
+  display: flex;
+  gap: 10px; 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-main {
-  min-height: 700px;
+.screen {
   width: 100%;
-  margin: 0;
-}
-
-table, tbody, tr {
-  gap: 0px;
-  width: 100%;
-  align-content: center;
-  border-spacing: 0px;
-}
-
-/* 
-.film_box {
-  background-color: chocolate;
-  margin: 10px;
-  border: 1px solid rebeccapurple;
-  width: 250px;
-  float: left;
   text-align: center;
-} */
+  color: var(--c3);
+  background-color: var(--c2);
+  padding: 10px;
+  margin-bottom: 10px;
+}
 
+#seatMapContainer {
+  visibility: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  z-index: 999; 
+  background-color: var(--c3); 
+  padding: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+}
 
+.seat {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
 
+.seat.reserved {
+  background-color: #333;
+  color: var(--c3);
+}
 
+.seat.chosen {
+  background-color: var(--c1);
+}
 
+/* payment.php template */
 
+#payment_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+}
 
-/* table tbody th {
-  background-color: darkred;
-} */
+#payment_str {
+  font-size: 20px;
+  color: var(--c1);
+  margin: 13px;
+  width: 60%;
+  text-align: center;
+}
 
-/* .film_box:hover {
-  background-color: antiquewhite;
-  scale: 1.05;
-  transition-duration: 0.5s;
-  transition-property: background-color, scale;
-} */
+/* contact.php template */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#kontakt {
+#contact {
+  margin-top: 50px;
   padding: 4px;
   text-align: center;
-  background-color: #333;
-  color: orange;
+  background-color: var(--c2);
+  color: var(--c1);
   opacity: 90%;
   clear: both;
 }
 
-#zap_b {
-  min-height: 300px;
-  background-color: gray;
-  padding: 10px;
-  margin: 10px;
+#email{
+  text-decoration: none;
+  color: var(--c1);
 }
 
-#zap_b table {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+/* order_status.php template */
+
+#order_status_form {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#zap_b table th,
-td {
-  border: 1px solid #ddd;
-  padding: 8px;
+#order_status_form form {
+  min-width: 90%;
+  align-items: center;
+}
+
+#order_status_str {
+  font-size: 20px;
+  color: var(--c1);
+  margin: 13px;
+}
+
+/* footer.php template */
+footer {
+  background-color: var(--c2);
+  color: var(--c3);
+  padding: 1em;
+  text-align: center;
+}
+
+#buyTicketSubmit:hover{
+  background-color: var(--c1);
+  color: var(--c3);
+  transition-duration: 1s;
+  transition-property: background-color, color;
+  
+}
+
+/* admin.php template */
+
+#form_login_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+#form_login {
+  color: var(--c1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+  width: 50%;
+  padding: 50px;
 }
 
 #bg_admin {
-  padding: 5px;
-  width: 100%;
+  color: var(--c1);
+  padding: 10px;
   min-height: 60%;
-  overflow: auto;
   clear: both;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#logout_box {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#logout{
+  text-align: right;
+  margin: 30px;
+}
+
+#logout a{
+  text-decoration: none;
+  color: var(--c4);
 }
 
 .admin_box {
-  background-color: chocolate;
   margin: 10px;
-  border: 1px solid rebeccapurple;
-  width: 40%;
-  float: left;
+  padding: 1em;
+  min-width: 40%;
+  min-height: 40%;
   text-align: center;
   padding: 3px;
+  justify-content: center;
+} 
+
+.adminForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#form_logowanie{
-  border: 3px solid #f1f1f1;
-  background-color: orange;
-  width: 80%;
-  padding: 5px;
-  margin: 20px;
-  padding-bottom: 15px;
-  left: 50%;
-  bottom: 50%;
+.buttonStyle {
+  width: 100%;
 }
 
-#cennik_table{
+#pricing_table{
   width: 100%;
 }
 
@@ -338,15 +438,31 @@ td {
 
 
 
+@media screen and (max-width: 1080px) {
+  /* nav.php template */
 
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 
-#logout {
-  padding: 3px;
-  margin: 10px;
-}
+  nav ul li {
+    flex: 1 0 50%; 
+  }
 
-#logout a{
-  text-decoration: none;
-  color: black;
-  background-color: red;
+    /* index.php template */
+
+  .dropdown {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* film_description.php template */
+  
+  #filmShowsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
