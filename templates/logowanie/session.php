@@ -1,5 +1,5 @@
 <?php
-$c = mysqli_connect("localhost", "root", "", "dane_kino");
+$c = mysqli_connect("localhost", "root", "", "cinema_db");
 session_start();
 
 $user_check = $_SESSION['login_user'];

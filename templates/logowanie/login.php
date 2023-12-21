@@ -4,16 +4,23 @@ $error='';
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $c = mysqli_connect("localhost", "root", "", "dane_kino");
 
-    $query = mysqli_query($c, "select * from login where password='" . $password . "' AND username='" . $username ."';");
-    $rows = mysqli_num_rows($query);
+    $c = new mysqli("localhost", "root", "", "cinema_db");
+    $stmt = $c->prepare("SELECT * FROM login WHERE password=? AND username=?");
+    $stmt->bind_param("ss", $password, $username);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+
+    $rows = $result->num_rows;
     if ($rows == 1) {
         $_SESSION['login_user'] = $username; 
         header("location: ../admin_loged.php");
     } else {
-        $error = "Nieprawidłowy login lub hasło.";
+        $error = "Incorrect login or password.";
     }
-    mysqli_close($c); 
+
+    $stmt->close();
+    $c->close(); 
 }
 ?>
