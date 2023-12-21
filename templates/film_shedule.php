@@ -1,6 +1,4 @@
-<main id="filmy">
-    
-    
+<main id="filmsContainer">
     <!-- Dropdown to select the day -->
     <div class="dropdown">
         <h1>Movies in our cinema:</h1>
@@ -54,7 +52,6 @@
 
             return formattedDate;
         }        
-        
         // Function to fetch film shows for the selected day
         function getShows() {
             // Get the selected day from the dropdown
@@ -70,7 +67,6 @@
             })
             .then(response => response.json())
             .then(data => {
-                // Display film shows in the HTML container
                 displayFilmShows(data);
             })
             .catch(error => {
@@ -78,21 +74,13 @@
             });
         }
 
-        // Function to display film shows
         function displayFilmShows(shows) {
-            // Get the container element
             let container = document.getElementById("filmShowsContainer");
-
-            // Create HTML content for film shows
             let htmlContent = "<table>";
-
             shows.forEach(show => {
-                htmlContent += `<tr class="seans" onclick="window.location.href='film_description.php?id=${show.id}'"><td>${show.title}</td></tr>`;
+                htmlContent += `<tr class="seans" onclick="window.location.href='film_description.php?id=${show.id}'"><td>${show.title} <div id = "genreStr">${show.genre}</div></td></tr>`;
             });
-
             htmlContent += "</table>";
-
-            // Set the HTML content of the container
             container.innerHTML = htmlContent;
         }
 
