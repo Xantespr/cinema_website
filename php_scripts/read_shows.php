@@ -7,7 +7,7 @@
 
     $selectedDay = $_POST['day'];
 
-    $query = "SELECT showing.id, film.title FROM `showing` JOIN film on film.id = showing.film_id WHERE DATE(`date`) = '$selectedDay' ORDER BY showing.date";
+    $query = "SELECT showing.id, film.title, film.genre FROM `showing` JOIN film on film.id = showing.film_id WHERE DATE(`date`) = '$selectedDay' ORDER BY showing.date";
 
     $result = mysqli_query($c, $query);
 
