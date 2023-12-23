@@ -7,8 +7,8 @@ Simple cinema website with admininstration panel and database.
 ## Description
 
 - The news section hasn't been updated. 
-- Under the news section, there's one where you can view the movies that are currently playing or will be playing up to six days in advance (depending on the dropdown selection). 
-- If you click on any movie title, you will be taken to a page with the movie description, poster, and a button. Clicking on the button will show you the movie screening dates, where you can choose the date and language, and then provide your personal information to purchase tickets.
+* Under the news section, there's one where you can view the movies that are currently playing or will be playing up to six days in advance (depending on the dropdown selection). 
++ If you click on any movie title, you will be taken to a page with the movie description, poster, and a button. Clicking on the button will show you the movie screening dates, where you can choose the date and language, and then provide your personal information to purchase tickets.
 
 Film description:
 ![Webpage screenshot](screenshots/film_description.jpg?raw=true "Preview")  
